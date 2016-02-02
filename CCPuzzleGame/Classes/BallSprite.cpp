@@ -81,6 +81,16 @@ void BallSprite::setPositionIndexAndChangePosition(PositionIndex positionIndex)
     resetPosition();
 }
 
+// 消去アニメーションと落下アニメーション
+void BallSprite::removingAndFallngAnimation(int maxRemoveNo)
+{
+    // ボールを消すアニメーション
+    removingAnimation(maxRemoveNo);
+    
+    // ボールを落とすアニメーション
+    fallingAnimation(maxRemoveNo);
+}
+
 // ボール削除アニメーション
 void BallSprite::removingAnimation(int maxRemoveNo)
 {
@@ -101,7 +111,7 @@ void BallSprite::fallingAnimation(int maxRemoveNo)
 {
     if(_fallCount > 0){
         // ボールを落とすアニメーション
-        setPositionIndex(PositionIndex(_positionIndex._x, _positionIndex._y));
+        setPositionIndex(PositionIndex(_positionIndex._x, _positionIndex._y - _fallCount));
         
         auto delay = DelayTime::create(ONE_ACTION_TIME * maxRemoveNo);
         auto show = Show::create();
