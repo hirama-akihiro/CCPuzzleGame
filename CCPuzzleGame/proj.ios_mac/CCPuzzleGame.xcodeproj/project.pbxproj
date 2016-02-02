@@ -51,6 +51,7 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		593872DF1C61114F0085DA29 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593872DE1C61114F0085DA29 /* GameLayer.cpp */; };
 		59D24FA11C5E10EF004664DD /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D24F7F1C5E10EF004664DD /* 0.png */; };
 		59D24FA21C5E10EF004664DD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D24F801C5E10EF004664DD /* 1.png */; };
 		59D24FA31C5E10EF004664DD /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D24F811C5E10EF004664DD /* 2.png */; };
@@ -174,6 +175,8 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		593872DD1C6111320085DA29 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		593872DE1C61114F0085DA29 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
 		59D24F7F1C5E10EF004664DD /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		59D24F801C5E10EF004664DD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		59D24F811C5E10EF004664DD /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -387,6 +390,8 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				59D24FC21C5E127C004664DD /* BallSprite.cpp */,
 				59D24FC41C5E1292004664DD /* BallSprite.h */,
+				593872DD1C6111320085DA29 /* GameLayer.h */,
+				593872DE1C61114F0085DA29 /* GameLayer.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -617,6 +622,7 @@
 				59D24FC31C5E127C004664DD /* BallSprite.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				593872DF1C61114F0085DA29 /* GameLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

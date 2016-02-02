@@ -1,4 +1,5 @@
 #include "AppDelegate.h"
+#include "GameLayer.h"
 
 USING_NS_CC;
 
@@ -43,42 +44,23 @@ bool AppDelegate::applicationDidFinishLaunching()
         director->setOpenGLView(glview);
     }
     
-    // ディスプレイへのFPS表示を許可
+    // FPSをディスプレイに表示
     director->setDisplayStats(true);
     
-    // ゲームのFSPを設定
+    // FPSの設定
     director->setAnimationInterval(1.0 / 60.0);
+    
+    // DesignResolutionSizeの設定
+    glview->setDesignResolutionSize(640, 1136, ResolutionPolicy::FIXED_WIDTH);
+    
+    // シーンの生成
+    auto scene = GameLayer::createScene();
+    
+    // シーン切り替え
+    director->runWithScene(scene);
     
     return true;
 }
-
-//bool AppDelegate::applicationDidFinishLaunching()
-//{
-//    // Directorの初期化
-//    auto director = Director::getInstance();
-//    auto glview = director->getOpenGLView();
-//    if(!glview){
-//        glview = GLViewImpl::create("CCCard13");
-//        director->setOpenGLView(glview);
-//    }
-//    
-//    // FPSをディスプレイに表示
-//    director->setDisplayStats(true);
-//    
-//    // FPSの設定
-//    director->setAnimationInterval(1.0 / 60.0);
-//    
-//    // DesignResolutionSizeの設定
-//    glview->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
-//    
-//    // シーンの生成
-//    auto scene = TitleScene::createScene();
-//    
-//    // シーン切り替え
-//    director->runWithScene(scene);
-//    
-//    return true;
-//}
 
 //bool AppDelegate::applicationDidFinishLaunching() {
 //    // initialize director

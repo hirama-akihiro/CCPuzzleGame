@@ -61,6 +61,6 @@ public:
 protected:
     void removingAnimation(int maxRemoveNo); // ボール削除アニメーション
     void fallingAnimation(int maxRemoveNo); // ボール落下アニメーション
-}
+};
 
 #endif /* BallSprite_h */
