@@ -4,6 +4,7 @@
 #include "cocos2d.h"
 #include <random>
 #include "BallSprite.h"
+#include "Character.h"
 
 class GameLayer : public cocos2d::Layer
 {
@@ -36,6 +37,14 @@ protected:
     int _chainNumber; // 連続数のカウント
     std::vector<std::map<BallSprite::BallType, int>> _removeNumbers; // 削除するボールのカウント
     
+    Character* _enemyData;
+    cocos2d::Sprite* _enemy;
+    cocos2d::ProgressTimer* _hpBarforEnemy;
+    
+    cocos2d::Vector<Character*> _memberData;
+    cocos2d::Vector<cocos2d::Sprite*> _members;
+    cocos2d::Vector<cocos2d::ProgressTimer*> _hpBarForMembers;
+    
     void initBackGround(); // 背景の初期化
     void initBalls(); // ボールの初期表示
     BallSprite* newBall(BallSprite::PositionIndex positionIndex, bool visible); // 新規ボール作成
@@ -50,6 +59,9 @@ protected:
     void removeAndGenerateBalls(); // ボールの削除とボールの生成
     void generateBalls(int xLineNum, int fallCount); // ボールを生成する
     void animationBalls(); // ボールの削除と落下アニメーション
+    
+    void initEnemy();
+    void initMembers();
     
 public:
     GameLayer();
