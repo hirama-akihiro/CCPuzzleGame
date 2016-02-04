@@ -52,6 +52,7 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		593872DF1C61114F0085DA29 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593872DE1C61114F0085DA29 /* GameLayer.cpp */; };
+		593872E21C630A880085DA29 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 593872E11C630A880085DA29 /* Character.cpp */; };
 		59D24FA11C5E10EF004664DD /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D24F7F1C5E10EF004664DD /* 0.png */; };
 		59D24FA21C5E10EF004664DD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D24F801C5E10EF004664DD /* 1.png */; };
 		59D24FA31C5E10EF004664DD /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D24F811C5E10EF004664DD /* 2.png */; };
@@ -177,6 +178,8 @@
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		593872DD1C6111320085DA29 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
 		593872DE1C61114F0085DA29 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
+		593872E01C630A710085DA29 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		593872E11C630A880085DA29 /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
 		59D24F7F1C5E10EF004664DD /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		59D24F801C5E10EF004664DD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		59D24F811C5E10EF004664DD /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -392,6 +395,8 @@
 				59D24FC41C5E1292004664DD /* BallSprite.h */,
 				593872DD1C6111320085DA29 /* GameLayer.h */,
 				593872DE1C61114F0085DA29 /* GameLayer.cpp */,
+				593872E01C630A710085DA29 /* Character.h */,
+				593872E11C630A880085DA29 /* Character.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -619,6 +624,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				593872E21C630A880085DA29 /* Character.cpp in Sources */,
 				59D24FC31C5E127C004664DD /* BallSprite.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
