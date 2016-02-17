@@ -46,6 +46,9 @@ protected:
     cocos2d::Vector<cocos2d::Sprite*> _members;
     cocos2d::Vector<cocos2d::ProgressTimer*> _hpBarForMembers;
     
+    int _level; // 現在のレベル
+    int _nextLevel; // 次のレベル
+    
     void initBackGround(); // 背景の初期化
     void initBalls(); // ボールの初期表示
     BallSprite* newBall(BallSprite::PositionIndex positionIndex, bool visible); // 新規ボール作成
@@ -71,12 +74,18 @@ protected:
     void endAnimation(); // アニメーション終了時の処理
     cocos2d::Spawn* vibratingAnimation(int afterHp); // 振動アニメーション
     
+    void initLevelLayer(); // レベル表示レイヤーの表示
+    void removeLevelLayer(float dt); // レベル表示用レイヤーの削除
+    void winAnimation(); // Winアニメーション
+    void loseAnimation(); // Loseアニメーション
+    void nextScene(float dt); // 次のシーンへ遷移
+    
 public:
     GameLayer();
-    virtual bool init(); // 初期化
-    CREATE_FUNC(GameLayer); // crete関数作成
+    virtual bool init(int level); // 初期化
     // GameLayerクラスのインスタンスを持つシーンを生成する
-    static cocos2d::Scene* createScene(); // シーン生成
+    static GameLayer* create(int level); // create関数生成
+    static cocos2d::Scene* createScene(int level = 1); // シーン生成
     
     // タップイベント
     virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* unused_event);
