@@ -30,6 +30,7 @@ protected:
     
     std::default_random_engine _engine; // 乱数生成エンジン
     std::discrete_distribution<int> _distForBall; // 乱数の分布
+    std::uniform_int_distribution<int> _distForMember; // 乱数の範囲
     BallSprite* _movingBall; // 動かしているボール
     bool _movedBall; // 他のボールとの接触有無
     bool _touchable; // タップの可否
@@ -62,6 +63,13 @@ protected:
     
     void initEnemy();
     void initMembers();
+    void calculateDamage(int &chainNum, int &healing, int &damage, std::set<int> &attackers); // ダメージの計算
+    bool isAttacker(BallSprite::BallType type, Character::Element element); // アタッカー判定
+    void attackToEnemy(int damage, std::set<int> attackers); // 敵への攻撃
+    void healMember(int healing); // メンバーの回復
+    void attackFromEnemy(); // 敵からの攻撃
+    void endAnimation(); // アニメーション終了時の処理
+    cocos2d::Spawn* vibratingAnimation(int afterHp); // 振動アニメーション
     
 public:
     GameLayer();
